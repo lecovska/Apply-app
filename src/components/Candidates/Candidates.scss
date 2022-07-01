@@ -1,0 +1,19 @@
+.candidates{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px 20px;
+
+  
+
+    .candidateCard{
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+        background-color: peru;
+        color: white;
+        font-weight: 700;
+    }
+}
+

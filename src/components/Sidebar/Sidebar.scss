@@ -1,0 +1,12 @@
+.sideBar{
+    background-color: rgb(148, 223, 8);
+    height: 100%;
+    width: 200px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
