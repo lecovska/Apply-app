@@ -10,7 +10,7 @@ const HomePage = (props) => {
 
   return (
     <div className="homepage">
-      HomePage
+     
       <Header openLogin={openLogin} />
       <Candidates />
       {openLoginModal && <LoginModal openLogin={openLogin} />}
