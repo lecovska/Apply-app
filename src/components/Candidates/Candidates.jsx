@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useContext } from "react";
 import "./Candidates.scss";
+import { appCtx } from "../../contexts";
+import { Link, useRouteMatch } from "react-router-dom";
 
 const Candidates = () => {
-    const arr = [1, 2, 3, 4, 5, 6];
+  const candidates = useContext(appCtx);
 
-    return (
-        <div className="candidates">
-            {arr.map((e, i) => {
-                return <div className="candidateCard" key={i}>
-                    {e}
-                    </div>
-            }
-            )}
-        </div>
-    )
-}
+  return (
+    <div className="candidates">
+      {candidates.map((e, i) => {
+        return (
+          <Link to={`/candidate/${e.id}`}>
+            <div className="candidateCard" key={i}>
+              {/* <img src={e.avatar} alt="img" /> */}
+              <h2>{e.name}</h2>
+              <p>{e.email}</p>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+};
 
 export default Candidates;
