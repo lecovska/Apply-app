@@ -8,12 +8,14 @@ import Footer  from "../../components/Footer/Footer"
 
 const MainAdminPage = () => {
     return (
-        <div>
+        <div className='mainAdminPage'>
             MainAdminPage
             <Header/>
+            <div className='mainPart'>
             <Sidebar/>
             <ReportModal/>
             <CompanyReport/>
+            </div>
             <Footer/>
         </div>
     )

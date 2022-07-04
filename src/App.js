@@ -60,7 +60,7 @@ function App() {
               </Route>
 
 
-              <Route path="">
+              <Route path="/main">
                 <MainAdminPage />
               </Route>
               <WizardPage />

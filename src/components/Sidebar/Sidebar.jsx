@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Sidebar.scss";
 import Company from "../Company/Company"
+import { companyCtx } from '../../contexts';
 
 const Sidebar = () => {
-    const arr = ["google", "face", "amazon", "spotify"];
+    const companies = useContext(companyCtx)
     return (
         <div className="sideBar">
             Sidebar
-            {arr.map((e, i) => { return <Company name={e} /> })}
+            {companies.map((e, i) => { return <Company name={e.name} /> })}
         </div>
     )
 }
