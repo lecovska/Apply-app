@@ -1,25 +1,36 @@
-import React from 'react'
+import React, { useState } from "react";
 import "./MainAdminPage.scss";
-import Header from "../../components/Header/Header"
-import Sidebar from "../../components/Sidebar/Sidebar"
-import ReportModal from "../../components/ReportModal/ReportModal"
-import CompanyReport  from "../../components/CompanyReport/CompanyReport"
-import Footer  from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import ReportModal from "../../components/ReportModal/ReportModal";
+import CompanyReport from "../../components/CompanyReport/CompanyReport";
+import Footer from "../../components/Footer/Footer";
 
 const MainAdminPage = () => {
-    return (
-        <div className='mainAdminPage'>
-            MainAdminPage
-            <Header/>
-            
-            <div className='mainPart'>
-            <Sidebar/>
-            <ReportModal/>
-            <CompanyReport/>
-            </div>
-            <Footer/>
-        </div>
-    )
+
+const [activeReport, setActiveReport] = useState("Google");
+
+
+
+  
+  const changeReports = (e) => {
+    console.log(e.target.innerText);
+    setActiveReport(e.target.innerText);
 }
+
+
+  return (
+    <div className="mainAdminPage">
+      <Header />
+
+      <div className="mainPart">
+        <Sidebar changeReports={changeReports}/>
+        <ReportModal />
+        <CompanyReport activeReport={activeReport}/>
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 export default MainAdminPage;

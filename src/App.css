@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
+.app{
+    min-height: 100vh;
+
 }
+
+/* body{
+    min-height: 100vh;
+} */

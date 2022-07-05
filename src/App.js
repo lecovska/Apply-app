@@ -5,12 +5,15 @@ import MainAdminPage from "./pages/MainAdminPage/MainAdminPage";
 import WizardPage from "./pages/WizardPage/WizardPage";
 import { useEffect, useState } from "react";
 import { AppProvider, CompanyProvider, ReportProvider } from "./contexts";
-import { Switch, Link, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   const [candidates, setCandidates] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
+
+  // const accessToken =
+  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldkBkZXYuY29tIiwiaWF0IjoxNjU3MDI2MDU5LCJleHAiOjE2NTcwMjk2NTksInN1YiI6IjEifQ.twWmzimNSRUQT3Djm2J-g4vRpDmYOjDbJ8uriPy3nb0";
 
   const [openLoginModal, setOpenLoginModal] = useState(false);
 
@@ -54,11 +57,10 @@ function App() {
                   openLoginModal={openLoginModal}
                 />
               </Route>
-              
+
               <Route path="/candidate/:id">
                 <SinglePage />
               </Route>
-
 
               <Route path="/main">
                 <MainAdminPage />

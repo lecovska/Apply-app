@@ -1,9 +1,10 @@
 import React from 'react'
 import "./Company.scss";
 
-const Company = ({ name }) => {
+const Company = ({ name, changeReports }) => {
+
     return (
-        <div className="company">
+        <div className="company" onClick={changeReports}>
             {name}
         </div>
     )
