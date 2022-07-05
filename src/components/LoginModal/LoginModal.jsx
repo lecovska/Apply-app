@@ -6,22 +6,28 @@ const LoginModal = (props) => {
   return (
     <div id="modal-container">
       <div id="content-div" className="">
+        <div className="modal-image">
 
-        <label><b>Username:</b>
-          <input type="text" placeholder="Type username"/>
-        </label>
+        </div>
+        <div className="modal-form">
+          <h1>LOGIN</h1>
+          <label className="form-label"><b>Username:</b>
+            <input type="text" placeholder="Type username" required="" />
+          </label>
 
-        
-        <label><b>Password:</b>
-          <input type="text" placeholder="Type password"/>
-        </label>
 
-        <button className="modal-button"> Login </button>
+          <label className="form-label"><b>Password:</b>
+            <input type="password" placeholder="Type password" required="" />
+          </label>
 
-      </div>
-      <button className="close-modal" onClick={openLogin}>
+          <button className="modal-button"> Submit </button>
+
+        </div>
+        <button className="close-modal" onClick={openLogin}>
         X
       </button>
+      </div>
+
     </div>
   );
 };

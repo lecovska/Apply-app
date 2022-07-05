@@ -12,6 +12,12 @@ const HomePage = (props) => {
     <div className="homepage">
      
       <Header openLogin={openLogin} />
+      <div className="image">
+        <span>APPLY FOR FUTURE</span>
+      </div>
+
+      <h1 className="candidate-title">CANDIDATES</h1>
+     
       <Candidates />
       {openLoginModal && <LoginModal openLogin={openLogin} />}
       <Footer />
