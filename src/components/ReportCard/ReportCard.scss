@@ -7,11 +7,21 @@
 
     .singleReport{
         border: 1px solid black;
-        text-align: center;
+        text-align: left;
         padding: 10px;
-        background-color: rgb(82, 52, 23);
-        color: white;
+        background-color: rgb(189, 231, 255);
+        color: rgb(16, 15, 15);
         font-weight: 700;
+        width: 100%;
+        line-height: 20px;
+        border: none;
+       
+        h2{
+            text-align: center;
+            margin: 10px;
+        }
+       
+
     }
 
 }

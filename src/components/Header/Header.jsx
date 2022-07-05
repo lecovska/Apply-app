@@ -7,7 +7,7 @@ const Header = (props) => {
   const { openLogin } = props;
   return (
     <div className={flag ? "header" : "header dark"}>
-      <h1>APP(L)Y</h1>
+      <img src="./logo.png" alt="logo"></img>
       <button onClick={openLogin}>LOGIN</button>
     </div>
   );

@@ -10,8 +10,14 @@ const HomePage = (props) => {
 
   return (
     <div className="homepage">
-      HomePage
+     
       <Header openLogin={openLogin} />
+      <div className="image">
+        <span>APPLY FOR FUTURE</span>
+      </div>
+
+      <h1 className="candidate-title">CANDIDATES</h1>
+     
       <Candidates />
       {openLoginModal && <LoginModal openLogin={openLogin} />}
       <Footer />

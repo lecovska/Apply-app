@@ -12,7 +12,7 @@ const Candidates = () => {
         return (
           <Link to={`/candidate/${e.id}`}>
             <div className="candidateCard" key={i}>
-              {/* <img src={e.avatar} alt="img" /> */}
+              <img className="candidate-img" src="https://www.assyst.de/cms/upload/sub/digitalisierung/18-F.jpg" alt="img" />
               <h2>{e.name}</h2>
               <p>{e.email}</p>
             </div>
