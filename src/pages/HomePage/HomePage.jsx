@@ -13,7 +13,7 @@ const HomePage = (props) => {
      
       <Header openLogin={openLogin} />
       <div className="image">
-        <span>APPLY FOR FUTURE</span>
+        <span className="main-title">APPLY FOR FUTURE</span>
       </div>
 
       <h1 className="candidate-title">CANDIDATES</h1>

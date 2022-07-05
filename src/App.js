@@ -56,7 +56,10 @@ function App() {
               </Route>
               
               <Route path="/candidate/:id">
-                <SinglePage />
+                <SinglePage 
+                 openLogin={openLogin}
+                 openLoginModal={openLoginModal}
+                 />
               </Route>
 
 

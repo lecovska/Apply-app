@@ -10,14 +10,16 @@
     }
 
     .bio {
-        width: 40%;
+        // width: 40%;
         display: flex;
         flex-direction: column;
         align-items: left;
         padding-top: 100px;
         padding-left: 20px;
+        font-weight: bold;
 
         h2 {
+            
             margin-bottom: 10px;
             border-bottom: 1px solid black;
         }
@@ -25,12 +27,35 @@
         p {
             padding: 10px;
         }
-    }
 
+        .bio-image{
+            margin: 30px;
+            width: 400px;
+            border-radius: 50%;
+        }
+
+       
+    }
 
     .reportCards {
         padding-top: 100px;
     }
 
+.singlepage-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+
+
+    .personal-info{
+        margin: 50px;
+        margin-top: 10px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+}
 
 }
+
+
