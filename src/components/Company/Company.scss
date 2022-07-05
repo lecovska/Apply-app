@@ -1,3 +1,15 @@
 .company{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin:10px 0;
+    text-align: center;
+    // width: fit-content;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: blue;
+        transform: scale(1.1);
+    }
     
 }

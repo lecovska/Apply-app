@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    font-family: 'Macondo', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Flex', sans-serif;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Source Sans Pro', sans-serif;
+.app{
+    min-height: 100vh;
+
 }
+
+/* body{
+    min-height: 100vh;
+} */
