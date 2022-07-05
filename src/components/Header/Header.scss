@@ -4,9 +4,15 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: bisque;
+    padding: 5px 20px;
 }
 
 .dark {
     background-color: black;
     color: white;
+}
+button{
+    cursor: pointer;
+    padding: 10px;
+
 }

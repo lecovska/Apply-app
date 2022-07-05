@@ -11,6 +11,7 @@ const MainAdminPage = () => {
         <div className='mainAdminPage'>
             MainAdminPage
             <Header/>
+            
             <div className='mainPart'>
             <Sidebar/>
             <ReportModal/>
