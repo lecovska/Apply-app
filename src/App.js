@@ -4,13 +4,20 @@ import SinglePage from "./pages/SinglePage/SinglePage";
 import MainAdminPage from "./pages/MainAdminPage/MainAdminPage";
 import WizardPage from "./pages/WizardPage/WizardPage";
 import { useEffect, useState } from "react";
-import { AppProvider, CompanyProvider, ReportProvider } from "./contexts";
-import { Switch, Route } from "react-router-dom";
+import {
+  AppProvider,
+  CompanyProvider,
+  ReportProvider,
+  TokenProvider,
+} from "./contexts";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 function App() {
   const [candidates, setCandidates] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
+  // !! token
+  const [token, setToken] = useState(null);
 
   // const accessToken =
   //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldkBkZXYuY29tIiwiaWF0IjoxNjU3MDI2MDU5LCJleHAiOjE2NTcwMjk2NTksInN1YiI6IjEifQ.twWmzimNSRUQT3Djm2J-g4vRpDmYOjDbJ8uriPy3nb0";
@@ -45,32 +52,42 @@ function App() {
     getReportInfo();
   }, []);
 
+  console.log(token);
+
   return (
     <AppProvider value={candidates}>
       <CompanyProvider value={companies}>
         <ReportProvider value={reports}>
-          <div className="app">
-            <Switch>
-              <Route exact path="/">
-                <HomePage
-                  openLogin={openLogin}
-                  openLoginModal={openLoginModal}
-                />
-              </Route>
-
-              <Route path="/candidate/:id">
-                <SinglePage 
-                 openLogin={openLogin}
-                 openLoginModal={openLoginModal}
-                 />
-              </Route>
-
-              <Route path="/main">
-                <MainAdminPage />
-              </Route>
-              <WizardPage />
-            </Switch>
-          </div>
+          <TokenProvider value={setToken}>
+            <div className="app">
+              {token && (
+                <Switch>
+                  <Route path="/admin">
+                    <MainAdminPage />
+                  </Route>
+                  <Route path="/create-report">
+                    <WizardPage />
+                  </Route>
+                </Switch>
+              )}
+              {!token && (
+                <Switch>
+                  <Route exact path="/">
+                    <HomePage
+                      openLogin={openLogin}
+                      openLoginModal={openLoginModal}
+                    />
+                  </Route>
+                  <Route path="/candidate/:id">
+                    <SinglePage
+                      openLogin={openLogin}
+                      openLoginModal={openLoginModal}
+                    />
+                  </Route>
+                </Switch>
+              )}
+            </div>
+          </TokenProvider>
         </ReportProvider>
       </CompanyProvider>
     </AppProvider>

@@ -9,7 +9,6 @@ const MainAdminPage = () => {
   const [activeReport, setActiveReport] = useState("Google");
 
   const changeReports = (e) => {
-    console.log(e.target.innerText);
     setActiveReport(e.target.innerText);
   };
 

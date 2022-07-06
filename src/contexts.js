@@ -8,3 +8,6 @@ export const CompanyProvider = companyCtx.Provider;
 
 export const reportCtx = React.createContext();
 export const ReportProvider = reportCtx.Provider;
+
+export const tokenCtx = React.createContext();
+export const TokenProvider = tokenCtx.Provider;

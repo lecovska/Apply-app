@@ -1,61 +1,53 @@
 .singlepage {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .candidates {
+    height: 100vh;
+  }
+
+  .bio {
+    // width: 40%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-weight: bold;
 
-    .candidates {
-        height: 100vh;
+    h2 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid black;
     }
 
-    .bio {
-        // width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        padding-top: 100px;
-        padding-left: 20px;
-        font-weight: bold;
-
-        h2 {
-            
-            margin-bottom: 10px;
-            border-bottom: 1px solid black;
-        }
-
-        p {
-            padding: 10px;
-        }
-
-        .bio-image{
-            margin: 30px;
-            width: 400px;
-            border-radius: 50%;
-        }
-
-       
+    p {
+      padding: 10px;
     }
 
-    .reportCards {
-        padding-top: 100px;
+    .bio-image {
+      margin: 30px;
+      width: 400px;
+      border-radius: 50%;
     }
+  }
 
-.singlepage-wrapper{
+  .reportCards {
+    padding-top: 100px;
+  }
+
+  .singlepage-wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
-   
 
-
-    .personal-info{
-        margin: 50px;
-        margin-top: 10px;
-        line-height: 30px;
-        font-weight: bold;
+    .personal-info {
+      margin: 50px;
+      margin-top: 10px;
+      line-height: 30px;
+      font-weight: bold;
     }
+  }
 }
-
-}
-
-
