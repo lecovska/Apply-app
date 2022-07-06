@@ -18,6 +18,7 @@ function App() {
   const [reports, setReports] = useState([]);
 
   const [token, setToken] = useState(localStorage.getItem("hasToken"));
+  console.log(token)
 
   const history = useHistory();
 
@@ -32,7 +33,8 @@ function App() {
   };
 
   const logout = () => {
-    setToken(localStorage.setItem("hasToken", !token));
+    setToken("");
+    localStorage.removeItem("hasToken");
   };
 
   const getCandidatesInfo = () => {
@@ -60,9 +62,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    token && history.push("/admin");
+    if (token) {
+      history.push("/admin");
+    }
     closeLogin();
-  }, [token]);
+  }, [token, history]);
 
   return (
     <AppProvider value={candidates}>
