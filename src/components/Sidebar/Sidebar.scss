@@ -1,7 +1,7 @@
 .sideBar{
-    background-color: rgb(170, 248, 244);
+    
     height: 100vh;
-    min-width: 25%;
+    min-width: 18%;
     position: sticky;
     top: 0;
     left: 0;
@@ -9,5 +9,19 @@
     flex-direction: column;
     // align-items: center;
     padding: 20px;
+    padding-top: 70px;
     font-weight: 700;
+    border: 1px solid black;
+    background-color: #1919198f;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 47px 4px 50px -11px rgba(110,107,101,0.67); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 47px 4px 50px -11px rgba(110,107,101,0.67);
+
+
+
+.sidebar-img{
+    width: 40%;
+    height: 15%;
+    padding-bottom: 20px;
+}
+    
 }

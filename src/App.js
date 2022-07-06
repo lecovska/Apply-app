@@ -17,7 +17,7 @@ function App() {
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
   // !! token
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(true);
 
   // const accessToken =
   //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldkBkZXYuY29tIiwiaWF0IjoxNjU3MDI2MDU5LCJleHAiOjE2NTcwMjk2NTksInN1YiI6IjEifQ.twWmzimNSRUQT3Djm2J-g4vRpDmYOjDbJ8uriPy3nb0";

@@ -1,15 +1,30 @@
 .company{
+   
+   
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 25px;
+   font-size: 20px;
+    padding-bottom: 20px;
+    // border: none;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.697) ;
     margin:10px 0;
     text-align: center;
     // width: fit-content;
     cursor: pointer;
+      /* From https://css.glass */
+    //   background: rgba(227, 232, 232, 0.751);
+    //   border-radius: 10px;
+    //   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    //   backdrop-filter: blur(18.2px);
+    //   -webkit-backdrop-filter: blur(18.2px);
+    //   -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
+    //   box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
     &:hover{
-        background-color: white;
-        color: blue;
+        background-color: rgba(255, 255, 255, 0.561);
+        color: rgb(50, 50, 50);
         transform: scale(1.1);
+        border-radius: 10px;
+
     }
     
 }

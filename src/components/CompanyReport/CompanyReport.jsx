@@ -3,7 +3,7 @@ import "./CompanyReport.scss";
 import Eye from "./svg-eye.svg";
 import { reportCtx } from "../../contexts";
 import moment from "moment";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const CompanyReport = ({ activeReport }) => {
   const reports = useContext(reportCtx);
@@ -21,12 +21,13 @@ const CompanyReport = ({ activeReport }) => {
       <div className="nav-bar">
         <input type="text" placeholder="search" />
         <div className="nav-buttons">
-          <button className="toggle" onClick={changeListView}>
-            toggle
-          </button>
-          <Link to="/">
+          <img className="toggle-button" src="https://icon-library.com/images/list-icon-png/list-icon-png-20.jpg" alt="" onClick={changeListView}></img>
+          
+           
+        
+          {/* <Link to="/">
             <button className="candidates-button">Candidates</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <h2>{activeReport}</h2>
@@ -48,6 +49,7 @@ const CompanyReport = ({ activeReport }) => {
           );
         })}
       </div>
+     
     </div>
   );
 };

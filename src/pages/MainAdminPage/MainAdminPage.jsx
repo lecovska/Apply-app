@@ -14,12 +14,15 @@ const MainAdminPage = () => {
 
   return (
     <div className="mainAdminPage">
+     
       <Header />
+       <div className="adminpage-img"></div>
 
       <div className="mainPart">
         <Sidebar changeReports={changeReports} />
 
         <CompanyReport activeReport={activeReport} />
+      
       </div>
       <Footer />
     </div>
