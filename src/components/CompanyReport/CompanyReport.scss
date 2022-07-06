@@ -3,7 +3,7 @@
   text-align: center;
   z-index: 1;
 
-  .addNewReport{
+  .addNewReport {
     background: transparent;
     border: 1px solid black;
     border-radius: 50%;
@@ -12,9 +12,10 @@
     position: absolute;
     bottom: -5%;
     right: 1%;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37px -30px rgba(110,107,101,0.56); 
-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37px -30px rgba(110,107,101,0.56);
-    
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+      10px 7px 37px -30px rgba(110, 107, 101, 0.56);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+      10px 7px 37px -30px rgba(110, 107, 101, 0.56);
   }
 
   .gridReportCompany {
@@ -24,7 +25,6 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
     padding: 10px 80px;
 
     .singleCompanyReport {
-
       position: relative;
       // flex: 1;
       padding: 10px;
@@ -42,10 +42,10 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(18.2px);
       -webkit-backdrop-filter: blur(18.2px);
-      -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
-      box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
-
-      
+      -webkit-box-shadow: 2px 5px 16px 0px #0b325e,
+        0px -11px 50px -28px rgba(110, 107, 101, 0);
+      box-shadow: 2px 5px 16px 0px #0b325e,
+        0px -11px 50px -28px rgba(110, 107, 101, 0);
 
       .name,
       .date,
@@ -68,11 +68,10 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
           font-weight: 600;
           border: none;
           cursor: pointer;
-          color: rgb(70, 2, 244);;
+          color: rgb(70, 2, 244);
           height: 25px;
           width: 25px;
           font-size: 18px;
-
         }
 
         img {
@@ -81,7 +80,6 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
 
           &:hover {
             cursor: pointer;
-            
           }
         }
       }
@@ -96,7 +94,6 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
     padding: 10px 100px;
 
     .singleCompanyReport {
-
       // border: none;
       display: flex;
       justify-content: space-between;
@@ -113,8 +110,10 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(18.2px);
       -webkit-backdrop-filter: blur(18.2px);
-      -webkit-box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
-      box-shadow: 2px 5px 16px 0px #0B325E, 0px -11px 50px -28px rgba(110, 107, 101, 0);
+      -webkit-box-shadow: 2px 5px 16px 0px #0b325e,
+        0px -11px 50px -28px rgba(110, 107, 101, 0);
+      box-shadow: 2px 5px 16px 0px #0b325e,
+        0px -11px 50px -28px rgba(110, 107, 101, 0);
 
       .name,
       .date,
@@ -128,7 +127,7 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
         padding: 10px;
 
         button {
-          background-color:transparent;
+          background-color: transparent;
           font-weight: 600;
           border: none;
           border-radius: 30%;
@@ -146,7 +145,6 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
 
           &:hover {
             cursor: pointer;
-            
           }
         }
       }
@@ -159,8 +157,6 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
     border-bottom: 1px solid black;
     padding: 0 10px;
 
-
-
     input {
       font-size: 15px;
       // width: 250px;
@@ -170,27 +166,25 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
     .nav-buttons {
       display: flex;
       padding: 10px;
-      
+
       .toggle-button {
         cursor: pointer;
         margin-right: 10px;
         padding: 5px;
         background: rgba(106, 255, 237, 0.06);
 
-       
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(1.5px);
         -webkit-backdrop-filter: blur(1.5px);
         border: 1px solid rgb(255, 255, 255);
         width: 40px;
         border: none;
-      
       }
-      
+
       a {
         text-decoration: none;
       }
-      
+
       // .candidates-button {
       //     // width: 100px;
       //     padding: 10px;
@@ -203,17 +197,11 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37
       //   backdrop-filter: blur(1.5px);
       //   -webkit-backdrop-filter: blur(1.5px);
       //   border: 1px solid rgb(255, 255, 255);
-      
+
       //   &:hover {
       //       background-color: white;
       //    }
       //   }
-        
-      
-      }
     }
   }
-
-  
-  
-
+}
