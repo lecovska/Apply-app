@@ -9,7 +9,7 @@ import moment from "moment";
 import LoginModal from "../../components/LoginModal/LoginModal";
 
 const SinglePage = (props) => {
-  const { openLogin, openLoginModal } = props;
+  const { openLogin, openLoginModal, closeLogin } = props;
 
   const match = useRouteMatch();
   // console.log(match);
@@ -65,7 +65,7 @@ const SinglePage = (props) => {
         </div>
       )}
 
-      {openLoginModal && <LoginModal openLogin={openLogin} />}
+      {openLoginModal && <LoginModal closeLogin={closeLogin} />}
       <Footer />
     </div>
   );
