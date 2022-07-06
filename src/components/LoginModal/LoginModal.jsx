@@ -1,16 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./LoginModal.scss";
 import { tokenCtx } from "../../contexts";
-import { useHistory } from "react-router-dom";
 
 const LoginModal = (props) => {
-  const { openLogin } = props;
-  const setToken = useContext(tokenCtx);
+  const { closeLogin } = props;
+  const { setToken, token } = useContext(tokenCtx);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const history = useHistory();
 
   const body = {
     email: username,
@@ -26,7 +23,10 @@ const LoginModal = (props) => {
       },
     })
       .then((res) => res.json())
-      .then((data) => setToken(data));
+      .then((data) => {
+        localStorage.setItem("hasToken", data.accessToken);
+        setToken(data.accessToken);
+      });
   };
 
   return (
@@ -63,7 +63,7 @@ const LoginModal = (props) => {
             Submit
           </button>
         </div>
-        <button className="close-modal" onClick={openLogin}>
+        <button className="close-modal" onClick={closeLogin}>
           X
         </button>
       </div>
