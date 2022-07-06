@@ -3,6 +3,19 @@
   text-align: center;
   z-index: 1;
 
+  .addNewReport{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 50px;
+    width: 3%;
+    position: absolute;
+    bottom: -5%;
+    right: 1%;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37px -30px rgba(110,107,101,0.56); 
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 10px 7px 37px -30px rgba(110,107,101,0.56);
+    
+  }
 
   .gridReportCompany {
     width: 100%;
@@ -115,13 +128,13 @@
         padding: 10px;
 
         button {
-          background-color: white;
+          background-color:transparent;
           font-weight: 600;
           border: none;
           border-radius: 30%;
           margin-left: 10px;
           cursor: pointer;
-          color: rgb(70, 2, 244);
+          color: rgb(3, 3, 3);
           height: 32px;
           width: 32px;
           font-size: 22px;
@@ -163,6 +176,7 @@
         margin-right: 10px;
         padding: 5px;
         background: rgba(106, 255, 237, 0.06);
+
        
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(1.5px);
@@ -170,6 +184,7 @@
         border: 1px solid rgb(255, 255, 255);
         width: 40px;
         border: none;
+      
       }
       
       a {

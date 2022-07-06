@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./CompanyReport.scss";
-import Eye from "./svg-eye.svg";
+import Eye from "./eyee.svg";
 import { reportCtx } from "../../contexts";
 import moment from "moment";
 // import { Link } from "react-router-dom";
@@ -49,7 +49,7 @@ const CompanyReport = ({ activeReport }) => {
           );
         })}
       </div>
-     
+     <button className="addNewReport">+</button>
     </div>
   );
 };
