@@ -16,6 +16,7 @@ function App() {
   const [candidates, setCandidates] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
+
   const [token, setToken] = useState(localStorage.getItem("hasToken"));
 
   const history = useHistory();

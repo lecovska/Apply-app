@@ -9,6 +9,7 @@ const Sidebar = ({changeReports}) => {
 
     return (
         <div className="sideBar">
+            {/* <img className='sidebar-img' src='https://icons.veryicon.com/png/o/miscellaneous/zr_icon/company-23.png'/><span>Choose company:</span> */}
             {companies.map((e, i) => { return <Company name={e.name} changeReports={changeReports}/> })}
         </div>
     )

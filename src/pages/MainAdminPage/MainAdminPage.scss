@@ -1,8 +1,44 @@
 .mainAdminPage {
   height: 100%;
+
+ 
+
+  .mainPart {
+    display: flex;
+    padding-top: 70px;
+  
+    h2{
+      font-size: 30px;
+      text-align: left ;
+      padding-left: 110px;
+      padding-top: 20px;
+    }
+  }
+  
+  .adminpage-img {
+
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.herzing.edu/sites/default/files/styles/fp_960_480/public/2021-03/Is%20Data%20Analytics%20Right%20for%20Me.jpg.webp?itok=XGcrEhsW");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    
+
+  }
+
+  
 }
 
-.mainPart {
-  display: flex;
-  padding-top: 70px;
-}
+
+
+
+
+
+
+// 
