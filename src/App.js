@@ -10,22 +10,28 @@ import {
   ReportProvider,
   TokenProvider,
 } from "./contexts";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 
 function App() {
   const [candidates, setCandidates] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
-  // !! token
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem("hasToken"));
 
-  // const accessToken =
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldkBkZXYuY29tIiwiaWF0IjoxNjU3MDI2MDU5LCJleHAiOjE2NTcwMjk2NTksInN1YiI6IjEifQ.twWmzimNSRUQT3Djm2J-g4vRpDmYOjDbJ8uriPy3nb0";
+  const history = useHistory();
 
   const [openLoginModal, setOpenLoginModal] = useState(false);
 
   const openLogin = () => {
-    setOpenLoginModal(!openLoginModal);
+    setOpenLoginModal(true);
+  };
+
+  const closeLogin = () => {
+    setOpenLoginModal(false);
+  };
+
+  const logout = () => {
+    setToken(localStorage.setItem("hasToken", !token));
   };
 
   const getCandidatesInfo = () => {
@@ -52,22 +58,38 @@ function App() {
     getReportInfo();
   }, []);
 
-  console.log(token);
+  useEffect(() => {
+    token && history.push("/admin");
+    closeLogin();
+  }, [token]);
 
   return (
     <AppProvider value={candidates}>
       <CompanyProvider value={companies}>
         <ReportProvider value={reports}>
-          <TokenProvider value={setToken}>
+          <TokenProvider value={{ setToken, token, logout }}>
             <div className="app">
               {token && (
                 <Switch>
+                  <Route exact path="/">
+                    <HomePage
+                      openLogin={openLogin}
+                      openLoginModal={openLoginModal}
+                    />
+                  </Route>
                   <Route path="/admin">
                     <MainAdminPage />
                   </Route>
                   <Route path="/create-report">
                     <WizardPage />
                   </Route>
+                  <Route path="/candidate/:id">
+                    <SinglePage
+                      openLogin={openLogin}
+                      openLoginModal={openLoginModal}
+                    />
+                  </Route>
+                  <Redirect to="/admin" />
                 </Switch>
               )}
               {!token && (
@@ -76,14 +98,17 @@ function App() {
                     <HomePage
                       openLogin={openLogin}
                       openLoginModal={openLoginModal}
+                      closeLogin={closeLogin}
                     />
                   </Route>
                   <Route path="/candidate/:id">
                     <SinglePage
                       openLogin={openLogin}
                       openLoginModal={openLoginModal}
+                      closeLogin={closeLogin}
                     />
                   </Route>
+                  <Redirect to="/" />
                 </Switch>
               )}
             </div>
