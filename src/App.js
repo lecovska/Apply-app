@@ -16,9 +16,9 @@ function App() {
   const [candidates, setCandidates] = useState([]);
   const [companies, setCompanies] = useState([]);
   const [reports, setReports] = useState([]);
+  const [refresh, setRefresh] = useState(false);
 
   const [token, setToken] = useState(localStorage.getItem("hasToken"));
-  console.log(token)
 
   const history = useHistory();
 
@@ -58,8 +58,11 @@ function App() {
   useEffect(() => {
     getCandidatesInfo();
     getCompanyInfo();
-    getReportInfo();
   }, []);
+
+  useEffect(() => {
+    getReportInfo();
+  }, [refresh]);
 
   useEffect(() => {
     if (token) {
@@ -72,7 +75,7 @@ function App() {
     <AppProvider value={candidates}>
       <CompanyProvider value={companies}>
         <ReportProvider value={reports}>
-          <TokenProvider value={{ setToken, token, logout }}>
+          <TokenProvider value={{ setToken, token, logout, setRefresh, refresh }}>
             <div className="app">
               {token && (
                 <Switch>
