@@ -5,7 +5,7 @@ import { reportCtx } from "../../contexts";
 import moment from "moment";
 // import { Link } from "react-router-dom";
 
-const CompanyReport = ({ activeReport }) => {
+const CompanyReport = ({ activeReport, openModal }) => {
   const reports = useContext(reportCtx);
 
   const report = reports.filter((e) => e.companyName === activeReport);
@@ -21,10 +21,13 @@ const CompanyReport = ({ activeReport }) => {
       <div className="nav-bar">
         <input type="text" placeholder="search" />
         <div className="nav-buttons">
-          <img className="toggle-button" src="https://icon-library.com/images/list-icon-png/list-icon-png-20.jpg" alt="" onClick={changeListView}></img>
-          
-           
-        
+          <img
+            className="toggle-button"
+            src="https://icon-library.com/images/list-icon-png/list-icon-png-20.jpg"
+            alt=""
+            onClick={changeListView}
+          ></img>
+
           {/* <Link to="/">
             <button className="candidates-button">Candidates</button>
           </Link> */}
@@ -43,13 +46,13 @@ const CompanyReport = ({ activeReport }) => {
               <div className="status">Status: {e.status}</div>
               <div className="buttons">
                 <button>X</button>
-                <img src={Eye} alt="" />
+                <img src={Eye} alt="" onClick={openModal} />
               </div>
             </div>
           );
         })}
       </div>
-     <button className="addNewReport">+</button>
+      <button className="addNewReport">+</button>
     </div>
   );
 };
