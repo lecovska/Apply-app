@@ -25,15 +25,18 @@ const MainAdminPage = () => {
   return (
     <div className="mainAdminPage">
       <Header />
-
+      
       <div className="adminpage-img"></div>
-
+      
       <div className="mainPart">
+      
         <Sidebar changeReports={changeReports} />
-        {isModalOpen && <ReportModal closeModal={closeModal} />}
+        
 
         <CompanyReport activeReport={activeReport} openModal={openModal} />
+        
       </div>
+      {isModalOpen && <ReportModal closeModal={closeModal} />}
       <Footer />
     </div>
   );

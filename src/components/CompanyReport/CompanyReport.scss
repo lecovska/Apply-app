@@ -1,8 +1,10 @@
 .main {
+  position: relative;
   width: 100%;
   text-align: center;
   z-index: 1;
 
+  
   .addNewReport {
     background: transparent;
     border: 1px solid black;
@@ -158,8 +160,7 @@
     padding: 0 10px;
 
     input {
-      font-size: 15px;
-      // width: 250px;
+      font-size: 20px;
       text-align: center;
     }
 
