@@ -6,10 +6,11 @@ import Footer from "../../components/Footer/Footer"
 
 const WizardPage = () => {
     return (
-        <div>
-            WizardPage
+        <div className='mainWizard'>
             <Header/>
+            
             <Wizard/>
+         
             <Footer/>
         </div>
     )

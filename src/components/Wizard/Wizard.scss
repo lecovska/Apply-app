@@ -1,0 +1,72 @@
+.wizard {
+    flex: 1;
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  
+    .form-wrapper { 
+       width: 50%;
+       padding-left: 10%;
+       
+
+        h5{
+            border-bottom: 0.5px solid rgba(202, 176, 59, 0.692);
+            padding-bottom: 2%;
+        }
+
+    }
+
+    .note {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 5%;
+        padding-top: 10%;
+       
+
+       .textarea{
+        border: 1px solid rgb(68, 45, 10);
+        
+       
+       }
+        .create-report-button{
+            
+            width: 20%;
+            margin-top: 2%;
+            cursor: pointer;
+
+        }
+    }
+
+   #form-input{
+    width: 50%;
+    
+    border-image: none;
+    border-bottom: 0.5px solid rgba(226, 204, 106, 0.692);
+    height: 20%;
+    -webkit-box-shadow: 0px 10px 13px -7px  #8f8456, -3px 50px 50px -30px rgba(255,233,188,0.13); 
+    box-shadow: 0px 10px 13px -7px #8f8456, -3px 50px 50px -30px rgba(255,233,188,0.13);
+   }
+
+   select{
+   
+    width: 50%;
+    border: none;
+    border-image: none;
+    border-bottom: 0.5px solid rgba(226, 204, 106, 0.692);
+    height: 20%;
+    -webkit-box-shadow: 0px 10px 13px -7px  #8f8456, -3px 50px 50px -30px rgba(255,224,182,0.13); 
+box-shadow: 0px 10px 13px -7px  #8f8456, -3px 50px 50px -30px rgba(255,224,182,0.13);
+   }
+p{
+    margin-top: 2%;
+    font-size: 20px;
+}
+    }
+
+   
+    
+

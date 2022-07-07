@@ -79,20 +79,22 @@ function App() {
             <div className="app">
               {token && (
                 <Switch>
-                  <Route exact path="/">
-                    <HomePage
+                  <Route path="/admin">
+                    <MainAdminPage />
+                  </Route>
+
+                  <Route exact path="/create-report">
+                    <WizardPage />
+                  </Route>
+
+                  <Route path="/candidate/:id">
+                    <SinglePage
                       openLogin={openLogin}
                       openLoginModal={openLoginModal}
                     />
                   </Route>
-                  <Route path="/admin">
-                    <MainAdminPage />
-                  </Route>
-                  <Route path="/create-report">
-                    <WizardPage />
-                  </Route>
-                  <Route path="/candidate/:id">
-                    <SinglePage
+                  <Route exact path="/">
+                    <HomePage
                       openLogin={openLogin}
                       openLoginModal={openLoginModal}
                     />
@@ -100,6 +102,7 @@ function App() {
                   <Redirect to="/admin" />
                 </Switch>
               )}
+
               {!token && (
                 <Switch>
                   <Route exact path="/">
