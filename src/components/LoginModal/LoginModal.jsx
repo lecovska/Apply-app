@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./LoginModal.scss";
 import { tokenCtx } from "../../contexts";
+import { useHistory } from "react-router-dom";
 
 const LoginModal = (props) => {
   const { closeLogin } = props;
   const { setToken, token } = useContext(tokenCtx);
+
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +15,7 @@ const LoginModal = (props) => {
     email: username,
     password: password,
   };
+  const history = useHistory();
 
   const submitLoginForm = () => {
     fetch("http://localhost:3333/login", {
@@ -26,6 +29,8 @@ const LoginModal = (props) => {
       .then((data) => {
         localStorage.setItem("hasToken", data.accessToken);
         setToken(data.accessToken);
+        closeLogin();
+        history.push("/admin");
       });
   };
 

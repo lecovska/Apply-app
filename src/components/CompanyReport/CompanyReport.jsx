@@ -3,12 +3,15 @@ import "./CompanyReport.scss";
 import Eye from "./eyee.svg";
 import { reportCtx, tokenCtx } from "../../contexts";
 import moment from "moment";
+import { useHistory } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const CompanyReport = ({ activeReport, openModal }) => {
   const reports = useContext(reportCtx);
   const { token, setRefresh, refresh } = useContext(tokenCtx);
   const [searchValue, setSearchValue] = useState("");
+
+  const history = useHistory();
 
   const report = reports.filter((e) => e.companyName === activeReport);
 
@@ -24,6 +27,10 @@ const CompanyReport = ({ activeReport, openModal }) => {
       "Content-type": "application/json",
       Authorization: `Bearer ${token}`,
     },
+  };
+
+  const createRreport = () => {
+    history.push("/create-report");
   };
 
   const renderedSearch = report.filter((el) =>
@@ -78,7 +85,9 @@ const CompanyReport = ({ activeReport, openModal }) => {
             );
           })}
       </div>
-      <button className="addNewReport">+</button>
+      <button className="addNewReport" onClick={createRreport}>
+        +
+      </button>
     </div>
   );
 };

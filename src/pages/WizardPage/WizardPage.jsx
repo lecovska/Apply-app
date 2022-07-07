@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 import "./WizardPage.scss";
-import Header from "../../components/Header/Header"
-import Wizard from "../../components/Wizard/Wizard"
-import Footer from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header";
+import Wizard from "../../components/Wizard/Wizard";
+import Footer from "../../components/Footer/Footer";
 
 const WizardPage = () => {
-    return (
-        <div className='mainWizard'>
-            <Header/>
-            
-            <Wizard/>
-         
-            <Footer/>
-        </div>
-    )
-}
+  return (
+    <div className="mainWizard">
+      <Header />
+      <Wizard />
+      <Footer />
+    </div>
+  );
+};
 
 export default WizardPage;
