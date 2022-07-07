@@ -42,7 +42,7 @@ const CompanyReport = ({ activeReport, openModal }) => {
       <div className="nav-bar">
         <input
           type="text"
-          placeholder="search"
+          placeholder="Search candidate"
           onChange={(e) => {
             setSearchValue(e.target.value);
           }}

@@ -21,7 +21,7 @@
         color: rgb(16, 15, 15);
         font-weight: 700;
         font-size: 20px;
-        width: 70%;
+        min-width: 70%;
         height: 80%;
       
        
@@ -46,7 +46,8 @@ box-shadow: 29px 22px 25px -6px rgba(0,0,0,0.42);
 }
 
 .companyName{
-    width: 300px;
+    width: 200px;
+    
     // border: 1px solid black;
     position: absolute;
     top: -5%;
@@ -54,8 +55,8 @@ box-shadow: 29px 22px 25px -6px rgba(0,0,0,0.42);
     background-color: rgba(243, 220, 160, 0.938);
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 30px 14px 27px -17px rgba(49,4,4,0.72); 
     box-shadow: 0px 10px 13px -7px #000000, 30px 14px 27px -17px rgba(49,4,4,0.72);
-border-bottom-right-radius: 20px;
-border-top-left-radius: 20px;
+// border-bottom-right-radius: 20px;
+// border-top-left-radius: 20px;
 }
 
 span .pesonal-info-list{
