@@ -64,18 +64,19 @@ function App() {
     getReportInfo();
   }, [refresh]);
 
-  useEffect(() => {
-    if (token) {
-      history.push("/admin");
-    }
-    closeLogin();
-  }, [token, history]);
+  // useEffect(() => {
+  //   if (token) {
+  //     history.push("/admin");
+  //   }
+  // }, [token, history]);
 
   return (
     <AppProvider value={candidates}>
       <CompanyProvider value={companies}>
         <ReportProvider value={reports}>
-          <TokenProvider value={{ setToken, token, logout, setRefresh, refresh }}>
+          <TokenProvider
+            value={{ setToken, token, logout, setRefresh, refresh }}
+          >
             <div className="app">
               {token && (
                 <Switch>
