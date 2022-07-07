@@ -160,8 +160,18 @@
     padding: 0 10px;
 
     input {
+      height: 35px;
+      border-image: none;
       font-size: 20px;
-      text-align: center;
+      // text-align: center;
+      border: 1px solid rgba(23, 23, 23, 0.13);
+      border-radius: 5px;
+      padding: 5px;
+      -webkit-box-shadow: 0px 0px 0px 3px #d0cdcd, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #dfcbcd, 7px 45px 12px 11px rgba(203,203,203,0); 
+      box-shadow: 0px 0px 0px 3px #cbc9c9, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #b7a7a8, 7px 45px 12px 11px rgba(203,203,203,0);
+      margin-top: 15px;
+      margin-left: 10px;
+      outline: none;
     }
 
     .nav-buttons {

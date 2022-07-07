@@ -36,8 +36,9 @@ const LoginModal = (props) => {
         <div className="modal-form">
           <h1>LOGIN</h1>
           <label className="form-label">
-            <b>Username:</b>
+            Username:
             <input
+            className="input-login"
               type="text"
               placeholder="Type username"
               onChange={(e) => {
@@ -48,7 +49,7 @@ const LoginModal = (props) => {
           </label>
 
           <label className="form-label">
-            <b>Password:</b>
+            Password:
             <input
               type="password"
               placeholder="Type password"
@@ -60,7 +61,9 @@ const LoginModal = (props) => {
           </label>
 
           <button className="modal-button" onClick={submitLoginForm}>
-            Submit
+          
+   Submit
+ 
           </button>
         </div>
         <button className="close-modal" onClick={closeLogin}>
