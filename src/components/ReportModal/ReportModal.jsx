@@ -5,12 +5,10 @@ const ReportModal = ({ closeModal }) => {
     <div id="modal-containerReport">
       <div id="content-container">
         <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-          consectetur explicabo labore natus fugit officia ab ducimus,
-          exercitationem sunt maxime doloremque. Tempora ducimus nostrum
-          commodi?
+          Details
         </h2>
-        <button className="closeReportModal" onClick={closeModal}>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ducimus eius, itaque illum modi illo nisi aspernatur totam. Quis soluta possimus mollitia saepe eius? Quasi!</p>
+        <button id="closeReportModal" onClick={closeModal}>
           X
         </button>
       </div>

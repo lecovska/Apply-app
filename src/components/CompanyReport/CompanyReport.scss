@@ -1,8 +1,10 @@
 .main {
+  position: relative;
   width: 100%;
   text-align: center;
   z-index: 1;
 
+  
   .addNewReport {
     background: transparent;
     border: 1px solid black;
