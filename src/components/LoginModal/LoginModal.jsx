@@ -28,16 +28,17 @@ const LoginModal = (props) => {
     })
       .then((res) => {
         if (!res.ok) {
-          setError("Incorrect email or password");
+          setError("Incorrect pass or email");
         } else {
-          res.json();
+          return res.json();
         }
       })
       .then((data) => {
+        console.log(data.accessToken);
         localStorage.setItem("hasToken", data.accessToken);
         setToken(data.accessToken);
-        closeLogin();
         history.push("/admin");
+        closeLogin();
       });
   };
 
