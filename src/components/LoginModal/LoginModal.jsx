@@ -7,9 +7,10 @@ const LoginModal = (props) => {
   const { closeLogin } = props;
   const { setToken, token } = useContext(tokenCtx);
 
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const [error, setError] = useState("");
 
   const body = {
     email: username,
@@ -25,7 +26,13 @@ const LoginModal = (props) => {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          setError("Incorrect email or password");
+        } else {
+          res.json();
+        }
+      })
       .then((data) => {
         localStorage.setItem("hasToken", data.accessToken);
         setToken(data.accessToken);
@@ -34,16 +41,21 @@ const LoginModal = (props) => {
       });
   };
 
+  const style = {
+    color: "red",
+  };
+
   return (
     <div id="modal-container">
       <div id="content-div" className="">
         <div className="modal-image"></div>
         <div className="modal-form">
           <h1>LOGIN</h1>
+          <p style={style}>{error}</p>
           <label className="form-label">
             Username:
             <input
-            className="input-login"
+              className="input-login"
               type="text"
               placeholder="Type username"
               onChange={(e) => {
@@ -56,7 +68,7 @@ const LoginModal = (props) => {
           <label className="form-label">
             Password:
             <input
-            className="input-login"
+              className="input-login"
               type="password"
               placeholder="Type password"
               onChange={(e) => {
@@ -67,9 +79,7 @@ const LoginModal = (props) => {
           </label>
 
           <button className="modal-button" onClick={submitLoginForm}>
-          
-   Submit
- 
+            Submit
           </button>
         </div>
         <button className="close-modal" onClick={closeLogin}>
