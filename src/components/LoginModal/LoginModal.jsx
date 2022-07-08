@@ -56,6 +56,7 @@ const LoginModal = (props) => {
           <label className="form-label">
             Password:
             <input
+            className="input-login"
               type="password"
               placeholder="Type password"
               onChange={(e) => {

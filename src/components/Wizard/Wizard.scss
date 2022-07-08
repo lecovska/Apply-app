@@ -36,20 +36,26 @@
         .create-report-button{
             
             width: 20%;
+            height: 40px;
             margin-top: 2%;
             cursor: pointer;
+            border: none;
+            background-color: #8372318f;
+            color: white;
+            border-radius: 10px;
 
         }
     }
 
    #form-input{
     width: 50%;
-    
+    border: none;
     border-image: none;
     border-bottom: 0.5px solid rgba(226, 204, 106, 0.692);
     height: 20%;
     -webkit-box-shadow: 0px 10px 13px -7px  #8f8456, -3px 50px 50px -30px rgba(255,233,188,0.13); 
     box-shadow: 0px 10px 13px -7px #8f8456, -3px 50px 50px -30px rgba(255,233,188,0.13);
+    outline: none;
    }
 
    select{
