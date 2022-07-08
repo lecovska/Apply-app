@@ -104,7 +104,7 @@ const Wizard = () => {
         <textarea
           className="textarea"
           cols="20"
-          rows="25"
+          rows="18"
           placeholder="Note..."
           onChange={(event) => {
             setBody({ ...body, note: event.target.value });
